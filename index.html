@@ -5,11 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>In Concept LLC</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 
 <header>
-  <div class="logo">IN CONCEPT</div>
+  <div class="logo">
+    <svg width="200" height="60" viewBox="0 0 280 70" xmlns="http://www.w3.org/2000/svg"> <text x="0" y="40" font-family="Inter, sans-serif" font-size="30" font-weight="700" fill="#FFFFFF" stroke="#00A3E0" stroke-width="0.5"> InConcept </text> <text x="0" y="60" font-family="Inter, sans-serif" font-size="12" fill="#00A3E0"> Smart Accounting </text> </svg>
+  </div>
 
   <div class="menu-toggle" id="menuToggle">
     <span></span>
@@ -30,7 +33,7 @@
     </div>
   </nav>
 
-  <div class="lang-switch desktop-lang">
+  <div class="lang-switch desktop-lang text-xs">
     <button onclick="setLang('hy')">HY</button>
     <button onclick="setLang('ru')">RU</button>
     <button onclick="setLang('en')">EN</button>
@@ -38,7 +41,7 @@
 </header>
 
 <section class="hero" id="home">
-  <div class="hero-overlay"></div>
+  <div  class="hero-overlay"></div>
 
   <div class="hero-content reveal">
     <h1 data-key="hero_title"></h1>
@@ -48,14 +51,14 @@
 </section>
 
 <section id="about" class="reveal">
-  <h2 data-key="about_title"></h2>
+  <h2 class="font-medium text-4xl text-center mb-4" data-key="about_title"></h2>
   <div class="card">
     <p data-key="about_text"></p>
   </div>
 </section>
 
 <section id="services" class="reveal">
-  <h2 data-key="services_title"></h2>
+  <h2 class="font-medium text-4xl text-center mb-4" data-key="services_title"></h2>
 
   <div class="accordion">
 
@@ -91,19 +94,10 @@
 </section>
 
 <section id="contact" class="reveal">
-  <h2 data-key="contact_title"></h2>
+  <h2 class="font-medium text-4xl text-center mb-4" data-key="contact_title"></h2>
 
   <div class="card contact-info">
-    <h3>Ին Քոնսեփթ ՍՊԸ</h3>
-
-    <p><strong data-key="office_address_title"></strong></p>
-    <p>
-      ք. Երևան, Ադոնցի փ. 2/4, 8 մասնաշենք<br>
-      1 մուտք, 3-րդ հարկ
-    </p>
-
-    <p><strong data-key="phone_title"></strong></p>
-    <p>+374 33150300</p>
+    <h3 clas="text-center">Ին Քոնսեփթ ՍՊԸ</h3>
 
     <br>
 
@@ -118,13 +112,29 @@
 
     <br><br>
 
-    <form class="formal-form" onsubmit="return validateForm()">
-      <input type="text" id="name" data-key-placeholder="form_name" required>
-      <input type="email" id="email" data-key-placeholder="form_email" required>
-      <input type="text" id="subject" data-key-placeholder="form_subject" required>
-      <textarea id="message" rows="5" data-key-placeholder="form_message" required></textarea>
-      <button type="submit" data-key="send_btn"></button>
-    </form>
+    <div class="p-[22px] rounded-[8px]">
+      <div class="grid gap-6 md:grid-cols-3 max-w-5xl mx-auto max-w-[952px] mt-12">
+        <div class="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition text-[#101828] font-medium text-[18px] text-center">
+          <img class="mx-auto mb-4" src="assets/Message.png" alt="message">
+          <span>Email</span><br>
+          <a href="mailto:info@senkatech.com" class="text-[#00A3E0] hover:underline">inconceptac@dmail.com</a>
+        </div>
+
+        <!-- Phone -->
+        <div class="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition text-[#101828] font-medium text-[18px] text-center">
+          <img class="mx-auto mb-4" src="assets/Phone.png" alt="phone">
+          <span>Phone</span><br>
+          <a href="tel:+15551234567" class="text-[#00A3E0] hover:underline">+374 33150300</a>
+        </div>
+
+        <!-- Address -->
+        <div class="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition text-[#101828] font-medium text-[18px] text-center">
+          <img class="mx-auto mb-4" src="assets/Map.png" alt="map">
+          <span>Address</span><br>
+          <span class="text-[#00A3E0]"> ք. Երևան, Ադոնցի փ. 2/4, 8 մասնաշենք</span>
+        </div>
+      </div>
+    </div>
 
   </div>
 </section>
